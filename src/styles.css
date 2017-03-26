@@ -1,0 +1,122 @@
+body {
+  display: flex;
+  font-family: 'Source Sans Pro', sans-serif;
+  font-size: 18px;
+  justify-content: center;
+  height: 100vh;
+  background: #f5f5f5;
+  color: #4d4d4d;
+}
+
+.app h1 {
+  font-size: 45px;
+  font-weight: 100;
+  color: rgba(47, 47, 175, 0.15);
+  text-align: center;
+  text-rendering: optimizeLegibility;
+}
+
+.app input::-webkit-input-placeholder {
+	font-style: italic;
+	font-weight: 300;
+	color: #e6e6e6;
+}
+
+.app input::-moz-placeholder {
+	font-style: italic;
+	font-weight: 300;
+	color: #e6e6e6;
+}
+
+.app input::input-placeholder {
+	font-style: italic;
+	font-weight: 300;
+	color: #e6e6e6;
+}
+
+.amount {
+  position: relative;
+  width: 500px;
+  background: #fff;
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2),
+              0 25px 50px 0 rgba(0, 0, 0, 0.1);
+}
+
+.amount input {
+  margin: 0;
+  padding: 16px 16px 16px 60px;
+  border: none;
+  background: rgba(0, 0, 0, 0.003);
+  box-shadow: inset 0 -2px 1px rgba(0,0,0,0.03);
+  width: 100%;
+  font-size: 24px;
+  font-weight: 300;
+  line-height: 1.4em;
+  outline: none;
+  color: inherit;
+  box-sizing: border-box;
+}
+
+.amount::before {
+  position: absolute;
+  font-size: 30px;
+  font-weight: 100;
+}
+
+.amount.invalid::before {
+  top: 15px;
+  left: 18px;
+  color: #af5b5e;
+  content: '\D7';
+}
+
+.amount.valid::before {
+  top: 12px;
+  left: 6px;
+  content: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="-10 -18 100 135"><path fill="#5dc2af" d="M72 25L42 71 27 56l-4 4 20 20 34-52z"/></svg>');
+}
+
+.result {
+  width: 500px;
+}
+
+.result h3 {
+  color: rgba(47, 47, 175, 0.25);
+}
+
+.result ul {
+  display: flex;
+  flex-wrap: wrap;
+  list-style: none;
+  padding: 0;
+}
+
+.result ul li {
+  display: flex;
+  position: relative;
+  padding: 10px;
+  margin-bottom: 20px;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background: #fff;
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2),
+              0 25px 50px 0 rgba(0, 0, 0, 0.1);
+  align-items: center;
+  justify-content: center;
+}
+
+.result ul li:not(:last-child) {
+  margin-right: 20px;
+}
+
+.result ul li .value {
+  font-size: 40px;
+}
+
+.result ul li .qty {
+  position: absolute;
+  display: inline-block;
+  bottom: -20px;
+  right: -15px;
+}
