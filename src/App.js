@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import Input from './components/Input';
 import Result from './components/Result';
-import {validate, parse, getDenom} from './lib';
+import { validate, parse, getDenom } from './lib';
 
 class App extends Component {
   state = {
